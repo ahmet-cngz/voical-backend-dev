@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
 import dB from '../';
 import { compare, genSalt, hash } from 'bcryptjs';
+import { User } from '../models/user-models';
 
-export const registerUser = async (req: Request, res: Response) => {
+export const registerUser = async (req: Request<User>, res: Response) => {
     try {
         const { name, surname, age, biography, location, gender, looking_for, email, password } = req.body;
 
