@@ -6,5 +6,7 @@ create table users(
     biography varchar,
     location varchar(255),
     gender varchar(8),
-    looking_for varchar
+    looking_for varchar,
+    email varchar(144) unique,
+    password varchar(64)
 );
